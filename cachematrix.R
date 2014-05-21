@@ -1,12 +1,12 @@
 ## General Description
-### makeCacheMatrix creates a function list that stores a matrix and intializes a variable for its inverse.
-### cacheSolve checks to see if a matrix in a makeCachematrix function list has a calculated inverse.  If the 
-### inverse does not exist, it is calculated, otherwise the stored inverse is returned.
+## makeCacheMatrix creates a function list that stores a matrix and intializes a variable for its inverse.
+## cacheSolve checks to see if a matrix in a makeCachematrix function list has a calculated inverse.  If the 
+## inverse does not exist, it is calculated, otherwise the stored inverse is returned.
 
 ## makeCacheMatrix
-### If called with an input argument, create a function list with the input stored in x.  Otherwise generate
-### a function list with an empty matrix x.  $set re-writes the matrix x, $get returns the matrix value.  $setinv
-### sets the matrix inverse, and $getinv returns the cached inverse.
+## If called with an input argument, create a function list with the input stored in x.  Otherwise generate
+## a function list with an empty matrix x.  $set re-writes the matrix x, $get returns the matrix value.  $setinv
+## sets the matrix inverse, and $getinv returns the cached inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
@@ -24,8 +24,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## cacheSolve
-### Checks a function list created with makeCacheMatrix and returns the matrix inverse if already cached
-### Otherwise calculate, cache, and return the inverse matrix.
+## Checks a function list created with makeCacheMatrix and returns the matrix inverse if already cached
+## Otherwise calculate, cache, and return the inverse matrix.
 
 cacheSolve <- function(x, ...) {
         inv <- x$getinv()
